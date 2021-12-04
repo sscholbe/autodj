@@ -1,2 +1,4 @@
-/autodj/data/songs/*
+/autodj/data/songs/*.mp3
+/autodj/data/songs/*.mp4
+/autodj/data/songs/*.wav
 /venv
