@@ -2,8 +2,8 @@ import atexit
 import logging
 from ctypes import *
 
-from dj.api import start_api
-from dj.mixer import Mixer
+from backend.api import start_api
+from backend.mixer import Mixer
 
 
 def py_error_handler(filename, line, function, err, fmt):
@@ -35,5 +35,5 @@ if __name__ == "__main__":
 
     atexit.register(exit_handler)
 
-    logging.info('Initializing web server')
+    logging.info('Initializing frontend server')
     start_api(mix)

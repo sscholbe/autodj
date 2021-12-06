@@ -8,8 +8,8 @@ from typing import Tuple
 import numpy as np
 import svgwrite
 
-from autodj.dj.analysis import analyze_song
-from autodj.dj.audio import AudioFile
+from autodj.backend.analysis import analyze_song
+from autodj.backend.audio import AudioFile
 
 
 def get_artist_and_title(file: str) -> Tuple[str, str]:

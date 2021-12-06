@@ -8,7 +8,7 @@ import scipy.signal
 import scipy.signal
 import scipy.spatial
 
-from autodj.dj.audio import AudioFile
+from autodj.backend.audio import AudioFile
 
 
 def add_pw_functions(x1: List[float], y1: List[float], x2: List[float],

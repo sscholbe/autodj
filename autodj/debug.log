@@ -6,3 +6,28 @@
 (15:40:01) [INFO] Initializing web server
 (15:40:09) [INFO] data/songs/Lebanon Hanover - Lavender.mp3 (BPM 135.0, offset 0.0564375, length 249.939625)
 (15:40:09) [INFO] Channel load data/songs/Lebanon Hanover - Lavender.mp3
+(16:04:08) [INFO] Initializing mixer
+(16:04:09) [INFO] Initializing web server
+(16:05:21) [INFO] data/songs/Moonwalk - Meteora (Original Mix).mp4 (BPM 124.0, offset 0.28091666666666665, length 421.6279375)
+(16:05:21) [INFO] Channel load data/songs/Moonwalk - Meteora (Original Mix).mp4
+(16:06:13) [INFO] Initializing mixer
+(16:06:13) [INFO] Initializing web server
+(16:06:20) [INFO] data/songs/Moonwalk - Meteora (Original Mix).mp4 (BPM 124.0, offset 0.28091666666666665, length 421.6279375)
+(16:06:20) [INFO] Channel load data/songs/Moonwalk - Meteora (Original Mix).mp4
+(16:06:44) [INFO] data/songs/Mano Le Tough - Primative People (Tale Of Us Remix).wav (BPM 120.0, offset 0.15466666666666667, length 426.79439583333334)
+(16:06:44) [INFO] Channel load data/songs/Mano Le Tough - Primative People (Tale Of Us Remix).wav
+(16:07:13) [INFO] data/songs/Inhalt Der Nacht & Echoes Of October - Fleischleben (Original Mix).mp3 (BPM 138.0, offset 0.18308333333333332, length 484.1825)
+(16:07:13) [INFO] Channel load data/songs/Inhalt Der Nacht & Echoes Of October - Fleischleben (Original Mix).mp3
+(16:45:47) [INFO] Initializing mixer
+(16:45:47) [INFO] Initializing web server
+(16:46:24) [INFO] data/songs/Moonwalk - Meteora (Original Mix).mp4 (BPM 124.0, offset 0.28091666666666665, length 421.6279375)
+(16:46:24) [INFO] Channel load data/songs/Moonwalk - Meteora (Original Mix).mp4
+(16:47:24) [INFO] data/songs/Inhalt Der Nacht & Echoes Of October - Fleischleben (Original Mix).mp3 (BPM 138.0, offset 0.18308333333333332, length 484.1825)
+(16:47:24) [INFO] Channel load data/songs/Inhalt Der Nacht & Echoes Of October - Fleischleben (Original Mix).mp3
+(16:49:19) [INFO] data/songs/Mano Le Tough - Primative People (Tale Of Us Remix).wav (BPM 120.0, offset 0.15466666666666667, length 426.79439583333334)
+(16:49:19) [INFO] Channel load data/songs/Mano Le Tough - Primative People (Tale Of Us Remix).wav
+(16:06:14) [INFO] Initializing mixer
+(16:06:24) [INFO] Initializing mixer
+(16:06:24) [INFO] Initializing frontend server
+(16:06:41) [INFO] data/songs/The Weeknd - Blinding Lights.mp3 (BPM 171.0, offset 0.3220208333333333, length 203.28597916666666)
+(16:06:41) [INFO] Channel load data/songs/The Weeknd - Blinding Lights.mp3

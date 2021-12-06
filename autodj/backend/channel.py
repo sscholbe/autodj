@@ -6,7 +6,7 @@ import scipy.interpolate
 import numpy as np
 import scipy
 
-from autodj.dj.song import Song
+from autodj.backend.song import Song
 
 TransitionDef = Dict[str, List[Tuple[float, float]]]
 TransitionFunc = Dict[str, Callable[[np.ndarray], np.ndarray]]

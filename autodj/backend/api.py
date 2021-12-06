@@ -8,11 +8,11 @@ from typing import List
 import eventlet
 import socketio
 
-from autodj.dj.audio import AudioFile
-from autodj.dj.channel import TransitionDef
-from autodj.dj.fsm import QueueData, MixerStage
-from autodj.dj.mixer import Mixer
-from autodj.dj.song import Song, get_artist_and_title
+from autodj.backend.audio import AudioFile
+from autodj.backend.channel import TransitionDef
+from autodj.backend.fsm import QueueData, MixerStage
+from autodj.backend.mixer import Mixer
+from autodj.backend.song import Song, get_artist_and_title
 
 mixer: Mixer = None
 
@@ -21,13 +21,13 @@ sio = socketio.Server()
 
 def start_api(mix):
     """
-    Starts the web server and API.
+    Starts the frontend server and API.
     """
     global mixer
     mixer = mix
 
     static = {}
-    for root, dirs, files in os.walk('web'):
+    for root, dirs, files in os.walk('frontend'):
         for file in files:
             path = os.path.join(root, file)
             static['/' + os.path.join(*(path.split(os.path.sep)[1:]))] = {

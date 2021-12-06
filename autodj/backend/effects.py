@@ -9,7 +9,7 @@ import scipy.interpolate
 import scipy.signal
 import scipy.signal.signaltools
 
-from autodj.dj.audio import AudioFile
+from autodj.backend.audio import AudioFile
 
 
 class Effect(ABC):

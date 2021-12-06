@@ -3,9 +3,9 @@ from typing import Optional, List
 
 from attr import dataclass
 
-from autodj.dj.channel import TransitionStage, create_transition_func, Channel, \
+from autodj.backend.channel import TransitionStage, create_transition_func, Channel, \
     TransitionDef
-from autodj.dj.song import Song
+from autodj.backend.song import Song
 
 
 class TargetChannel(Enum):

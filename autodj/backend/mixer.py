@@ -6,21 +6,21 @@ import numpy as np
 import pyaudio
 import pyrubberband
 
-import autodj.dj.effects
-from autodj.dj.audio import AudioFile
-from autodj.dj.channel import Channel
-from autodj.dj.fsm import MixerFSM
+import autodj.backend.effects
+from autodj.backend.audio import AudioFile
+from autodj.backend.channel import Channel
+from autodj.backend.fsm import MixerFSM
 
 
-def get_all_effects() -> Dict[str, autodj.dj.effects.Effect]:
+def get_all_effects() -> Dict[str, autodj.backend.effects.Effect]:
     """
     Get an instance of all the effects defined in the `effects` module with a
     valid ID
     """
     is_valid = lambda m: inspect.isclass(m) and issubclass(m,
-        autodj.dj.effects.Effect) and m.ID is not None
-    return dict(
-        [(fx.ID, fx()) for _, fx in inspect.getmembers(autodj.dj.effects, is_valid)])
+        autodj.backend.effects.Effect) and m.ID is not None
+    return dict([(fx.ID, fx()) for _, fx in
+                 inspect.getmembers(autodj.backend.effects, is_valid)])
 
 
 class Mixer:
