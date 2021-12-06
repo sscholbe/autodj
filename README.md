@@ -12,6 +12,13 @@ AutoDJ is a DJ software that allows users to play music and easily create impres
 
 ## Demo
 
+TODO: Add YouTube video
+
+## Repository Structure
+
+* [Frontend (web)](/autodj/frontend)
+* [Backend (Python)](/autodj/backend)
+* [Songs folder (.mp3, .mp4, .wav)](/autodj/data/songs)
 
 ## Design
 
