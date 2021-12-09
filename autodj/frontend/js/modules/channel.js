@@ -83,6 +83,13 @@ export class Channel {
     }
 
 
+    clearSelection() {
+        this.selection.from = null;
+        this.selection.to = null;
+        this.selection.active = false;
+        this.updateSelection();
+    }
+
     updateSong() {
         this.selection.from = null;
         this.selection.to = null;
@@ -118,13 +125,11 @@ export class Channel {
     }
 
     updateSelection() {
-        if (this.song === null) {
+        if (this.song === null || this.selection.from === null ||
+            this.selection.to === null) {
             this.upd('selection', {
                 visibility: 'hidden'
             });
-            return;
-        }
-        if (this.selection.from === null || this.selection.to === null) {
             return;
         }
 

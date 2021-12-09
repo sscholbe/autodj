@@ -12,7 +12,9 @@ AutoDJ is a DJ software that allows users to play music and easily create impres
 
 ## Demo
 
-TODO: Add YouTube video
+I have recorded a demo video where I mix three royalty free songs (YouTube):
+
+[![Demo video](https://img.youtube.com/vi/wEPNNhKq_UQ/hqdefault.jpg)](https://www.youtube.com/watch?v=wEPNNhKq_UQ)
 
 ## Repository Structure
 
@@ -52,6 +54,9 @@ Transitions are implemented as a function of effect parameters over time (a line
 }
 ```
 
+## User Interface
+
+![](ui.jpeg)
 
 ## Issues
 

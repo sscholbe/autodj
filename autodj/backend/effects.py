@@ -188,7 +188,7 @@ class Volume(Effect):
     def apply(self, inp: np.ndarray, out: np.ndarray, param: np.ndarray,
             bpm: float):
         # Use square-rooted parameter to keep equal power in transitions
-        par = np.repeat([np.float_power(param, 1 / 1.5)], 2, axis=0).T
+        par = np.repeat([np.sqrt(param)], 2, axis=0).T
         out[:] = inp * par
 
 

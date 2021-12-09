@@ -1,3 +1,4 @@
+import logging
 from typing import List, Tuple
 
 import numpy as np
@@ -80,7 +81,7 @@ def analyze_song(src: AudioFile) -> Tuple[float, float]:
     #
 
     Sxx_flat = np.sum(Sxx, axis=0)
-    corr = np.correlate(Sxx_flat, Sxx_flat, mode='full')
+    corr = scipy.signal.correlate(Sxx_flat, Sxx_flat, mode='full')
     corr = scipy.ndimage.gaussian_filter(corr, 10)
     corr = corr[corr.shape[0] // 2:]
     x = np.arange(corr.shape[0])
@@ -91,7 +92,8 @@ def analyze_song(src: AudioFile) -> Tuple[float, float]:
     aby = np.empty(0)
     l = f.shape[0]
     d = 1
-    while l >= 2:
+
+    while l >= 2 and d <= 32:
         abx, aby = add_pw_functions(np.arange(f.shape[0]) / d, f, abx, aby)
         l /= 2
         d += 1

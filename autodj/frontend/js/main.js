@@ -39,6 +39,8 @@ function queue(dry) {
         }
         sck.emit('mixer_queue', transitions[$('#song-transition-0').val()],
             transitions[$('#song-transition-1').val()], sel_A, sel_B);
+        channels[0].clearSelection();
+        channels[1].clearSelection();
     }
     if (dry) {
         return false;
