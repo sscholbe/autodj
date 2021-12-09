@@ -11,7 +11,6 @@ import svgwrite
 from autodj.backend.analysis import analyze_song
 from autodj.backend.audio import AudioFile
 
-
 def get_artist_and_title(file: str) -> Tuple[str, str]:
     """
     Determines artist and song title from file name by splitting at '-'.

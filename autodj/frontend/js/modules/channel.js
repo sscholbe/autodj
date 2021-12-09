@@ -66,6 +66,8 @@ export class Channel {
         this.svg.parentElement.scrollTo(OFF, 0);
 
         this.last_file = undefined;
+
+
     }
 
     setup() {
@@ -89,6 +91,8 @@ export class Channel {
         this.upd('selection', {
             visibility: 'hidden'
         });
+
+        $(this.cnt('song-transition')).toggle(this.song !== null);
 
         if (this.song === null) {
             this.upd('sausage', {width: 0});

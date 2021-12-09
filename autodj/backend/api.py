@@ -14,6 +14,8 @@ from autodj.backend.fsm import QueueData, MixerStage
 from autodj.backend.mixer import Mixer
 from autodj.backend.song import Song, get_artist_and_title
 
+from threading import Thread
+
 mixer: Mixer = None
 
 sio = socketio.Server()
@@ -143,8 +145,19 @@ def mixer_load(sid, file: str):
     """
     Loads a song into the suitable channel.
     """
+    song = None
+
+    # Check if the song is already loaded in a channel (to reuse it)
+    for channel in mixer.channels:
+        if channel.song is not None and channel.song.file == file:
+            song = channel.song
+
+    # Otherwise load it from disk (heavy)
+    if song is None:
+        song = Song(file)
+
     with mixer.lock:
-        mixer.fsm.load(file)
+        mixer.fsm.load(song)
 
 
 @sio.event

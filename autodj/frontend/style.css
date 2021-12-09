@@ -1,222 +1,291 @@
 @import url('https://fonts.googleapis.com/css2?family=Francois+One:wght@400;700&display=swap');
+
 @keyframes blink {
-	0% {
-		opacity: 0.5;
-	}
-	50% {
-		opacity: 1.0;
-	}
-	100% {
-		opacity: 0.5;
-	}
+    0% {
+        opacity: 0.5;
+    }
+    50% {
+        opacity: 1.0;
+    }
+    100% {
+        opacity: 0.5;
+    }
 }
+
 @font-face {
-	font-family: lcd;
-	src: url('data/lcd_font.ttf');
+    font-family: lcd;
+    src: url('data/lcd_font.ttf');
 }
+
 button {
-	border: none;
-	color: white;
-	cursor: pointer;
-	opacity: 0.8;
-	padding: 2px 4px;
+    border: none;
+    color: white;
+    cursor: pointer;
+    opacity: 0.8;
+    padding: 2px 4px;
 }
+
 button[disabled] {
-	opacity: 0.1;
-	cursor: default;
+    opacity: 0.1;
+    cursor: default;
 }
+
 .lock-button {
-	position: absolute;
-	z-index: 99;
-	background: #000000;
-	margin-left: 5px;
-	margin-top: 5px;
+    position: absolute;
+    z-index: 99;
+    background: #000000;
+    margin-left: 5px;
+    margin-top: 5px;
 }
+
 button:not([disabled]):hover {
-	opacity: 1.0;
+    opacity: 1.0;
 }
+
 button:not([disabled]):hover:active {
-	opacity: 0.8;
+    opacity: 0.8;
 }
+
 .eq button {
-	width: 100%;
-	margin-bottom: 10px;
-	font-size: 140%;
+    width: 100%;
+    margin-bottom: 10px;
+    font-size: 140%;
+    border-radius: 5px;
 }
+
 #queue {
-	background: #ffa801;
+    background: #ffa801;
 }
+
 #cancel {
-	background: #808e9b;
+    background: #808e9b;
+    font-size: 100%;
 }
+
 html, body {
-	background: #1e272e;
-	padding: 0;
-	margin: 0;
+    background: #1e272e;
+    padding: 0;
+    margin: 0;
 }
+
 body {
-	width: 60%;
-	margin-top: 40px;
-	border: solid 2px #ffffff60;
+    width: 60%;
+    margin-top: 40px;
+    border: solid 2px #ffffff60;
+    border-radius: 10px;
 }
+
 * {
-	font-size: 16px;
-	font-family: 'francois one', sans-serif;
-	box-sizing: border-box;
+    font-size: 16px;
+    font-family: 'francois one', sans-serif;
+    box-sizing: border-box;
 }
+
 #direction {
-	font-size: 300%;
-	border-radius: 100%;
-	height: 200px;
-	width: 200px;
-	background: none;
+    font-size: 300%;
+    border-radius: 100%;
+    height: 200px;
+    width: 200px;
+    background: none;
 }
+
 input[type="number"] {
-	background: rgba(255, 255, 255, 0.1);
-	padding: 8px;
-	border: solid 2px gray;
-	width: 100%;
-	color: white;
-	text-align: center;
-	font-size: 140%;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 8px;
+    border: solid 2px gray;
+    width: 100%;
+    color: white;
+    text-align: center;
+    font-size: 140%;
+    border-radius: 5px;
 }
+
 select {
-	text-align: center;
-	background: #ffffff20;
-	padding: 5px;
-	border: solid 2px #ffffff60;
-	color: white;
-	width: 100%;
-	-webkit-appearance: none;
-	background-image: url('data/dropdown.png');
-	background-size: 10px;
-	background-repeat: no-repeat;
-	background-position: calc(100% - 10px) center;
-	font-size: 130%;
-	margin-top: 10px;
+    text-align: center;
+    background: #ffffff20;
+    padding: 5px;
+    border: solid 2px #ffffff60;
+    color: white;
+    width: 100%;
+    -webkit-appearance: none;
+    background-image: url('data/dropdown.png');
+    background-size: 10px;
+    background-repeat: no-repeat;
+    background-position: calc(100% - 10px) center;
+    font-size: 130%;
+    margin-top: 10px;
+    border-radius: 5px;
 }
+
+label[for="bpm"] {
+    margin-bottom:5px;
+}
+
 option {
-	background: #1e272e;
-	padding: 5px;
-	border: solid 2px gray;
+    background: #1e272e;
+    padding: 5px;
+    border: solid 2px gray;
 }
+
 html {
-	-webkit-user-select: none;
-	user-select: none;
-	-webkit-text-size-adjust: none;
-	display: flex;
-	justify-content: center;
-	color: white;
+    -webkit-user-select: none;
+    user-select: none;
+    -webkit-text-size-adjust: none;
+    display: flex;
+    justify-content: center;
+    color: white;
 }
+
 .container-fluid {
-	background: #1e272e;
+    background: #1e272e;
 }
+
 #status {
-	padding: 10px;
-	font-size: 150%;
+    padding: 10px;
+    font-size: 150%;
 }
+
 .header {
-	font-weight: bold;
-	font-size: 130%;
-	margin: 10px 0px;
-	border-bottom: solid 2px #ffffff60;
-	color: white;
-	padding: 5px 0px;
+    font-weight: bold;
+    font-size: 130%;
+    margin: 10px 0px;
+    border-bottom: solid 2px #ffffff60;
+    color: white;
+    padding: 5px 0px;
 }
+
 .tape {
-	overflow-y: hidden;
-	overflow-x: overlay;
-	/*border: solid 2px #ffffff80;*/
-	height: 80px;
+    overflow-y: hidden;
+    overflow-x: overlay;
+    /*border: solid 2px #ffffff80;*/
+    height: 80px;
 }
+
 .tape.a, .control:first-of-type {
-	background: rgba(255, 63, 52, 0.32);
-	text-align: left;
+    background: rgba(255, 63, 52, 0.32);
+    text-align: left;
 }
+
 .tape.b, .control:last-of-type {
-	background: rgba(52, 123, 255, 0.32);
+    background: rgba(52, 123, 255, 0.32);
 }
+
 .tape .sausage {
-	transition: transform 1s linear;
-	width: 10000000px;
+    transition: transform 1s linear;
+    width: 10000000px;
 }
+
 .tape::-webkit-scrollbar {
-	height: 0px;
+    height: 0px;
 }
+
 .tape::-webkit-scrollbar-track {
-	background: transparent;
+    background: transparent;
 }
+
 .tape::-webkit-scrollbar-thumb {
-	background-color: rgba(255, 255, 255, 0.5);
+    background-color: rgba(255, 255, 255, 0.5);
 }
-.control {}
-.control, .eq {
-	padding: 15px;
-}
-.eq {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	background: #ffffff30;
-	font-size: 130%;
-}
-.control .title {
-	font-size: 130%;
-}
-.control .artist, .control .bpm {
-	color: #ffffff80;
-}
-.control .bpm {
-	display: inline-block;
-}
-.control .time, .control .length {
-	font-family: lcd, monospace;
-	font-size: 200%;
-	display: inline-block;
-}
-.control .length {
-	font-size: 120%;
-}
-.controls {
-	display: flex;
-}
+
 .control {
-	width: 40%;
 }
+
+.control, .eq {
+    padding: 15px;
+}
+
 .eq {
-	width: 20%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #ffffff30;
+    font-size: 130%;
 }
+
+.control .title {
+    font-size: 130%;
+}
+
+.control .artist, .control .bpm {
+    color: #ffffff80;
+}
+
+.control .bpm {
+    display: inline-block;
+}
+
+.control .time, .control .length {
+    font-family: lcd, monospace;
+    font-size: 200%;
+    display: inline-block;
+}
+
+.control .length {
+    font-size: 120%;
+}
+
+.controls {
+    display: flex;
+}
+
+.control {
+    width: 40%;
+}
+
+.eq {
+    width: 20%;
+}
+
 #song-query {
-	width: 100%;
-	padding: 10px;
-	font-size: 130%;
-	background: #ffffff30;
-	border: none;
-	border-bottom: solid 2px #ffffff60;
-	border-top: solid 2px #ffffff60;
-	color: white;
+    width: 100%;
+    padding: 10px;
+    font-size: 130%;
+    background: #ffffff30;
+    border: none;
+    border-bottom: solid 2px #ffffff60;
+    border-top: solid 2px #ffffff60;
+    color: white;
 }
+
 table {
-	width: 100%;
-	text-align: left;
-	border-collapse: collapse;
+    width: 100%;
+    text-align: left;
+    border-collapse: collapse;
 }
+
 #songs tr:not(.header):hover {
-	background: #ffffff30;
-	cursor: pointer;
+    background: #ffffff30;
+    cursor: pointer;
 }
+
 th {
-	background: #485460;
-	position: sticky;
-	top: 0;
+    background: #485460;
+    position: sticky;
+    top: 0;
 }
+
 th.artist {
-	width: 40%;
+    width: 40%;
 }
+
 th.title {
-	width: 60%;
+    width: 60%;
 }
+
 .song-list {
-	height: 200px;
-	overflow-y: scroll;
+    height: 200px;
+    overflow-y: scroll;
+}
+
+.song-list::-webkit-scrollbar {
+    width: 5px;
+}
+
+.song-list::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.song-list::-webkit-scrollbar-thumb {
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 3px;
 }

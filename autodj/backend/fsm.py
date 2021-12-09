@@ -3,8 +3,8 @@ from typing import Optional, List
 
 from attr import dataclass
 
-from autodj.backend.channel import TransitionStage, create_transition_func, Channel, \
-    TransitionDef
+from autodj.backend.channel import TransitionStage, create_transition_func, \
+    Channel, TransitionDef
 from autodj.backend.song import Song
 
 
@@ -97,21 +97,11 @@ class MixerFSM:
         channel_dst.play(
             song_dst.bar_to_time(qd.selection_dst[0] - bars_to_transition))
 
-    def load(self, file: str, dry: bool = False) -> Optional[TargetChannel]:
+    def load(self, song: Song, dry: bool = False) -> Optional[TargetChannel]:
         """
         Plays the song in the suitable channel. If `dry` the channel is
         returned without executing the operation.
         """
-        # Try to find song in the channels first
-        song = None
-        if not dry:
-            for channel in self.mixer.channels:
-                if channel.song is not None and channel.song.file == file:
-                    song = channel.song
-
-            # Otherwise load it
-            if song is None:
-                song = Song(file)
 
         channel_a = self.mixer.channels[0]
         stage_a = channel_a.stage()
